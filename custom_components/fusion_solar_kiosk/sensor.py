@@ -11,7 +11,6 @@ from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
     CONF_ID,
     CONF_NAME,
-    HOSTNAME,
 )
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from .const import *
