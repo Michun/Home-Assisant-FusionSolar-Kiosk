@@ -1,6 +1,7 @@
 """Constants for FusionSolar Kiosk."""
 # Base constants
 DOMAIN = 'fusion_solar_kiosk'
+HOSTNAME = 'https://region04eu5.fusionsolar.huawei.com'
 
 
 # Configuration
