@@ -11,6 +11,7 @@ from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (
     CONF_ID,
     CONF_NAME,
+    HOSTNAME,
 )
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 from .const import *
@@ -33,7 +34,7 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
     async def async_update_data():
         """Fetch data"""
-        api = FusionSolarKioksApi('https://region04eu5.fusionsolar.huawei.com')
+        api = FusionSolarKioksApi(HOSTNAME)
         data = {}
         for kiosk in config[CONF_KIOSKS]:
             data[kiosk['id']] = {
